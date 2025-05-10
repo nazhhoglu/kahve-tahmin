@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from math import sqrt
 
 # CSV dosyasını oku
-df = pd.read_csv("kahve_verisi_encoded.csv")  # Dosya adını gerektiği gibi değiştirin
+df = pd.read_csv("kahve_verisi.csv")  # Dosya adını gerektiği gibi değiştirin
 
 # Özellikler ve hedef değişkeni belirle
 X = df.drop(columns=["Coffee_Consumption_kg", "Country"])  # Ülkeyi çıkardık çünkü modelde kullanılmayacak

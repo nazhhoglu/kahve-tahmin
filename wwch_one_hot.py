@@ -12,4 +12,4 @@ print("İlk 5 satır:\n", df_encoded.head())
 
 # 4. Yeni veriyi CSV olarak kaydet
 df_encoded.to_csv("kahve_verisi_encoded.csv", index=False)
-print("Encoded veri başarıyla 'kahve_verisi_encoded.csv' olarak kaydedildi.")
+print("Encoded veri başarıyla 'kahve_verisi.csv' olarak kaydedildi.")
