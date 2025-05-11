@@ -1,7 +1,6 @@
 import pandas as pd
 
-# 1. Veriyi oku
-df = pd.read_csv("worldwide_coffee_habits.csv")  # kendi dosya adına göre değiştir
+df = pd.read_csv("worldwide_coffee_habits.csv")  
 
 # 2. Kahve türlerini One-Hot Encoding'e çevir
 df_encoded = pd.get_dummies(df, columns=["Coffee_Type"])
