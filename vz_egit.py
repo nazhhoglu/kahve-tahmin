@@ -13,11 +13,11 @@ from lightgbm import LGBMRegressor
 df = pd.read_csv("veri_zenginlestirilmis.csv")
 
 
-# Özellik ve hedef değişkeni ayır
+
 X = df.drop("Coffee_Consumption_kg", axis=1)
 y = df["Coffee_Consumption_kg"]
 
-# Eğitim ve test verisine ayır
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Modelleri tanımla

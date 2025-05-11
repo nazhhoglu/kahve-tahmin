@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Veri dosyasını oku (burayı kendi dosya adına göre değiştir)
+
 dosya_adi = "veri_gelistirilmis.csv"
 df = pd.read_csv(dosya_adi)
 
@@ -23,6 +23,6 @@ for sutun in kategorik_sutunlar:
 print("\nEksik Değerler (Sonra):")
 print(df.isnull().sum())
 
-# Temizlenmiş veriyi yeni bir dosyaya kaydet
+
 df.to_csv("veri_temizlenmis.csv", index=False)
 print("\nTemizlenmiş veri 'veri_temizlenmis.csv' olarak kaydedildi.")

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Veriyi oku
+
 df = pd.read_csv("duzenlenmis_kahve_verisi.csv")  # Kendi dosya adını kullan
 
 # 1. Kahve türü sayısı ve karışım durumu
@@ -30,7 +30,7 @@ df["price_trend_interaction"] = df["standardized_price"] * df["yearly_trend"]
 df["americano_price_interaction"] = df["Coffee_Type_Americano"] * df["standardized_price"]
 df["americano_year_trend"] = df["Coffee_Type_Americano"] * df["yearly_trend"]
 
-# Yeni veri setini kaydet
+
 df.to_csv("veri_gelistirilmis.csv", index=False)
 
 print("Yeni özellikler eklendi ve 'veri_gelistirilmis.csv' olarak kaydedildi.")

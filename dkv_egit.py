@@ -8,10 +8,10 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-# Veri Yükleme
+
 df = pd.read_csv("duzenlenmis_kahve_verisi.csv")
 
-# İlk Bakış
+
 print(df.head())
 print(df.describe())
 
@@ -59,7 +59,7 @@ models = {
     "GradientBoosting": GradientBoostingRegressor(n_estimators=100, random_state=42)
 }
 
-# Performans Değerlendirme
+
 results = []
 for name, model in models.items():
     model.fit(X_train, y_train)

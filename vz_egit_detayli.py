@@ -10,17 +10,17 @@ from sklearn.svm import SVR
 from xgboost import XGBRegressor
 import lightgbm as lgb
 
-# Veriyi oku
+
 df = pd.read_csv("veri_zenginlestirilmis.csv")
 
-# Özellikler ve hedef değişken
+
 X = df.drop(columns=['Coffee_Consumption_kg'])
 y = df['Coffee_Consumption_kg']
 
 # Eğitim ve test seti ayırma
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Modelleri başlat
+
 models = {
     'Linear Regression': LinearRegression(),
     'Random Forest': RandomForestRegressor(),
@@ -30,7 +30,7 @@ models = {
     'LightGBM': lgb.LGBMRegressor()
 }
 
-# Model sonuçları
+
 results = {}
 
 # Eğitim ve test hatalarını hesapla

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Veriyi oku
+
 df = pd.read_csv("veri_temizlenmis.csv")
 
 # A. Yıl Bilgisini Açık Şekilde Kullan (varsayılan yıl_diff varsa)
@@ -16,7 +16,6 @@ for tur in kahve_turleri:
     df[f'{tur_adi}_price_interaction'] = df[tur] * df['standardized_price']
 
 # C. Coğrafi / Kültürel Gruplar (Varsa yoksa örnek amaçlı dummy sütun ekleyebiliriz)
-# df['region'] = ... # Eğer elinde varsa buraya ekleyebilirsin
 # Örnek: df = pd.get_dummies(df, columns=['region'], drop_first=True)
 
 # D. Tüketim Yoğunluğu (Kişi başı tüketim)

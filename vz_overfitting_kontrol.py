@@ -4,10 +4,10 @@ from sklearn.metrics import r2_score, mean_squared_error
 import lightgbm as lgb
 import numpy as np
 
-# Veriyi oku
+
 df = pd.read_csv("veri_zenginlestirilmis.csv")
 
-# Özellikler ve hedef değişken
+
 X = df.drop("Coffee_Consumption_kg", axis=1)  # 'target' yerine hedef sütun adını yaz
 y = df["Coffee_Consumption_kg"]
 
