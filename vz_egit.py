@@ -9,6 +9,9 @@ from sklearn.svm import SVR
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 # Veri setini yükle
 df = pd.read_csv("veri_zenginlestirilmis.csv")
 
@@ -39,3 +42,12 @@ for ad, model in modeller.items():
     print(f"\n{ad}:")
     print(f"  Mean Squared Error: {mse}")
     print(f"  R2 Score: {r2}")
+
+corr_matrix = df.corr(numeric_only=True)
+
+# Görselleştir
+plt.figure(figsize=(14, 10))
+sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap="coolwarm", center=0)
+plt.title("Korelasyon Matrisi - Tüm Özellikler")
+plt.tight_layout()
+plt.show()
